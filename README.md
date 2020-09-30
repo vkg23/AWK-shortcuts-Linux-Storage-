@@ -2,10 +2,8 @@
 Quick AWK Tips for Unix , linux and Storage related data processing
 
 
-> 1. Find the filesystems whose usage % beyond 60 
+> 1. Find the filesystems whose usage % equal or greater than 60 
 >> df -k | awk 'NR == 1 {print;next} ; {if (strtonum($5) >= 60) {print}}'
-
-
 
 ```
 Filesystem            kbytes    used   avail capacity  Mounted on

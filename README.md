@@ -30,4 +30,24 @@ venus:/usr/dist    20612581 13237316 6963015    66%    /usr/dist
 09/30/2020 04:41:50 AM sdi               0.00         0.00         0.00          0          0
 
 ```
+### 3. iostat or vmstat with timestamp appended in live stream (TS generated outside )
+>> iostat 1 | awk '/Device: / {"date" | getline ts ; close ("date")} ; {print ts,$0}'
+
+```
+# This generates a date command for every iteration of iostat when 'Device' header is located and then appends to every line. 
+#unlike a while loop in iostat , AWK works in live stream making it faster and smoother
+09/30/2020 04:41:50 AM Device:            tps    kB_read/s    kB_wrtn/s    kB_read    kB_wrtn
+09/30/2020 04:41:50 AM sda               6.00         0.00        28.00          0         28
+09/30/2020 04:41:50 AM dm-0              0.00         0.00         0.00          0          0
+09/30/2020 04:41:50 AM dm-1              0.00         0.00         0.00          0          0
+09/30/2020 04:41:50 AM sdb               0.00         0.00         0.00          0          0
+09/30/2020 04:41:50 AM sdc               0.00         0.00         0.00          0          0
+09/30/2020 04:41:50 AM sdd               0.00         0.00         0.00          0          0
+09/30/2020 04:41:50 AM sde               0.00         0.00         0.00          0          0
+09/30/2020 04:41:50 AM sdf               0.00         0.00         0.00          0          0
+09/30/2020 04:41:50 AM sdg               0.00         0.00         0.00          0          0
+09/30/2020 04:41:50 AM sdh               0.00         0.00         0.00          0          0
+09/30/2020 04:41:50 AM sdi               0.00         0.00         0.00          0          0
+
+```
 

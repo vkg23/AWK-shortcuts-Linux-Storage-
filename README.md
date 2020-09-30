@@ -1,6 +1,10 @@
 # AWK-shortcuts-Linux-Storage-
 Quick AWK Tips for Unix , linux and Storage related data processing
 
+# Table of Contents
+* [df output: Find the filesystems whose usage % equal or greater than 60](#df)
+* [iostat output: iostat or vmstat with timestamp appended in live stream ](#io1)
+
 
 ### <a name="df"> 1. Find the filesystems whose usage % equal or greater than 60  </a>
 >> df -k | awk 'NR == 1 {print;next} ; {if (strtonum($5) >= 60) {print}}'

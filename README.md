@@ -2,7 +2,7 @@
 Quick AWK Tips for Unix , linux and Storage related data processing
 
 
-### <a name="team-members"> 1. Find the filesystems whose usage % equal or greater than 60  </a>Team Members
+### <a name="df"> 1. Find the filesystems whose usage % equal or greater than 60  </a>
 >> df -k | awk 'NR == 1 {print;next} ; {if (strtonum($5) >= 60) {print}}'
 
 ```
@@ -11,7 +11,7 @@ Filesystem            kbytes    used   avail capacity  Mounted on
 /dev/dsk/c0t0d0s4    1784644 1525360  205745    89%    /export
 venus:/usr/dist    20612581 13237316 6963015    66%    /usr/dist
 ```
-### 2. iostat or vmstat with timestamp appended in live stream (using its own provied timestamp (-t) across lines 
+### <a name="io1"> 2. iostat or vmstat with timestamp appended in live stream (using its own provied timestamp (-t) across lines </a>
 >> iostat -t 1 | awk '/..:..:../ {ts=$0;next} {print ts,$0}'
 
 ```

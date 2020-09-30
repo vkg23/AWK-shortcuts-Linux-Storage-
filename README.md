@@ -3,6 +3,7 @@ Quick AWK Tips for Unix , linux and Storage related data processing
 
 # Table of Contents
 * [df output: Find the filesystems whose usage % equal or greater than 60](#df)
+* [iostat output: iostat or vmstat with timestamp appended in live stream using iostat TS ](#io1)
 * [iostat output: iostat or vmstat with timestamp appended in live stream ](#io1)
 
 
@@ -34,7 +35,7 @@ venus:/usr/dist    20612581 13237316 6963015    66%    /usr/dist
 09/30/2020 04:41:50 AM sdi               0.00         0.00         0.00          0          0
 
 ```
-### 3. iostat or vmstat with timestamp appended in live stream (TS generated outside )
+### <a name="io2"> 3. iostat or vmstat with timestamp appended in live stream (TS generated outside ) </a>
 >> iostat 1 | awk '/Device: / {"date" | getline ts ; close ("date")} ; {print ts,$0}'
 
 ```

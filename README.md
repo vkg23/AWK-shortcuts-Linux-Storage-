@@ -36,18 +36,17 @@ venus:/usr/dist    20612581 13237316 6963015    66%    /usr/dist
 ```
 # This generates a date command for every iteration of iostat when 'Device' header is located and then appends to every line. 
 #unlike a while loop in iostat , AWK works in live stream making it faster and smoother
-09/30/2020 04:41:50 AM Device:            tps    kB_read/s    kB_wrtn/s    kB_read    kB_wrtn
-09/30/2020 04:41:50 AM sda               6.00         0.00        28.00          0         28
-09/30/2020 04:41:50 AM dm-0              0.00         0.00         0.00          0          0
-09/30/2020 04:41:50 AM dm-1              0.00         0.00         0.00          0          0
-09/30/2020 04:41:50 AM sdb               0.00         0.00         0.00          0          0
-09/30/2020 04:41:50 AM sdc               0.00         0.00         0.00          0          0
-09/30/2020 04:41:50 AM sdd               0.00         0.00         0.00          0          0
-09/30/2020 04:41:50 AM sde               0.00         0.00         0.00          0          0
-09/30/2020 04:41:50 AM sdf               0.00         0.00         0.00          0          0
-09/30/2020 04:41:50 AM sdg               0.00         0.00         0.00          0          0
-09/30/2020 04:41:50 AM sdh               0.00         0.00         0.00          0          0
-09/30/2020 04:41:50 AM sdi               0.00         0.00         0.00          0          0
+Wed Sep 30 04:57:35 CEST 2020 Device:            tps    kB_read/s    kB_wrtn/s    kB_read    kB_wrtn
+Wed Sep 30 04:57:35 CEST 2020 dm-0              1.02        18.76        12.27  164650560  107740579
+Wed Sep 30 04:57:35 CEST 2020 dm-1              0.01         0.73         0.00    6375404          0
+
+Wed Sep 30 04:57:37 CEST 2020 Device:            tps    kB_read/s    kB_wrtn/s    kB_read    kB_wrtn
+Wed Sep 30 04:57:37 CEST 2020 dm-0              0.00         0.00         0.00          0          0
+Wed Sep 30 04:57:37 CEST 2020 dm-1              0.00         0.00         0.00          0          0
+
+Wed Sep 30 04:57:39 CEST 2020 Device:            tps    kB_read/s    kB_wrtn/s    kB_read    kB_wrtn
+Wed Sep 30 04:57:39 CEST 2020 dm-0              0.00         0.00         0.00          0          0
+Wed Sep 30 04:57:39 CEST 2020 dm-1              0.00         0.00         0.00          0          0
 
 ```
 

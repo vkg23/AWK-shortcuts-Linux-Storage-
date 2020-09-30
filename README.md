@@ -2,10 +2,11 @@
 Quick AWK Tips for Unix , linux and Storage related data processing
 
 
-> Processing DF output , Onliner :
-Q. Find the filesystems whose usage % beyond 60
+## Processing DF output , Onliner :
+> Find the filesystems whose usage % beyond 60 
+>> df -k | awk 'NR == 1 {print;next} ; {if (strtonum($5) >= 60) {print}}'
 
-df -k | awk 'NR == 1 {print;next} ; {if (strtonum($5) >= 60) {print}}'
+
 
 ```
 Filesystem            kbytes    used   avail capacity  Mounted on

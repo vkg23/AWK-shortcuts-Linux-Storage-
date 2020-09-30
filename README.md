@@ -36,7 +36,7 @@ venus:/usr/dist    20612581 13237316 6963015    66%    /usr/dist
 
 ```
 ### <a name="io2"> 3. iostat or vmstat with timestamp appended in live stream (TS generated outside ) </a>
->> iostat 1 | awk '/Device: / {"date" | getline ts ; close ("date")} ; {print ts,$0}'
+>> iostat 2 | awk '/Device: / {"date" | getline ts ; close ("date")} ; {print ts,$0}'
 
 ```
 # This generates a date command for every iteration of iostat when 'Device' header is located and then appends to every line. 

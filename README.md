@@ -9,6 +9,7 @@ Quick AWK Tips for Unix , linux and Storage related data processing
 
 ### <a name="df"> 1. Find the filesystems whose usage % equal or greater than 60  </a>
 >> df -k | awk 'NR == 1 {print;next} ; {if (strtonum($5) >= 60) {print}}'
+>> 
 >> df -h 2> /dev/null| awk '$(NF-1) > 90 {printf "%-40s\t%s\n",$NF,$(NF-1)}'
 
 ```
